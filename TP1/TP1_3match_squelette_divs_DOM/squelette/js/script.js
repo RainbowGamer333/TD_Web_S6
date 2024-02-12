@@ -15,4 +15,14 @@ function init() {
 
   grille = new Grille(9, 9);
   grille.showCookies();
+  startTimer();
+}
+
+function startTimer() {
+  let temps = document.querySelector("#temps");
+  let compteur = 0;
+  let timer = setInterval(() => {
+        temps.innerHTML = "Temps : " + ++compteur;
+    }, 1000);
+    return timer;
 }
